@@ -21,8 +21,10 @@
         		highlightOnHover: false,
     			},
     		done: function(datamap) {
+                console.log(datamap.__proto__.worldTopo.objects.world.geometries);
         		datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
             	var state_id = geography.id;
+                var state_name = geography.properties.name;
             	var fillkey_obj = datamap.options.data[state_id] || {fillKey: 'defaultFill'};
             	var fillkey = fillkey_obj.fillKey;
             	var fillkeys = Object.keys(fills);
