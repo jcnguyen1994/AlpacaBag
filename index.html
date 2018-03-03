@@ -8,11 +8,32 @@
 	<script src="/datamaps.world.min.js"></script>
 	<div id="container" style="position: relative; width: 80%; height: 80%; align-content: center;"></div>
 	<script>
+		var fills = {
+  			someOtherFill: '#ff0000',
+  			defaultFill: '#00ff00'
+		};
+
     	var map = new Datamap({
     		element: document.getElementById('container'),
-    		fills: {
-            	defaultFill: 'rgba(23,48,210,0.9)' // Any hex, color name or rgb/rgba value
-        	}
+    		fills: fills,
+    			geographyConfig: {
+        		highlightOnHover: false,
+    			},
+    		done: function(datamap) {
+        		datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+            	var state_id = geography.id;
+            	var fillkey_obj = datamap.options.data[state_id] || {fillKey: 'defaultFill'};
+            	var fillkey = fillkey_obj.fillKey;
+            	var fillkeys = Object.keys(fills);
+            	var antikey = fillkeys[Math.abs(fillkeys.indexOf(fillkey) - 1)];
+            	var new_fills = {
+              		[geography.id] : {
+                	fillKey: antikey
+              		}
+            	};
+            		datamap.updateChoropleth(new_fills);
+        		});
+    		}
     	});
 	</script>
  </body>
