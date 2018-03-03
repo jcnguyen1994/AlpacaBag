@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 5%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 90%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
