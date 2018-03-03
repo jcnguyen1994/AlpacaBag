@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>funstagram</title>
+	<style>
+		body {
+			background-color: #FAFAFA
+		}
+		#h1 {
+			font-family: Gotham, 'Helvetica Neue', Helvetica, 'sans-serif';
+			font-weight: 200;
+			margin-left: 450px;
+			margin-top: 100px;
+			margin-bottom: 25px;
+			font-size: 35px;
+		} 
+		#h3 {
+			font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			font-weight: 400;
+			width: 550px;
+			margin-left: 450px;
+			margin-bottom: 50px;
+		} 
+		#p {
+			font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+			font-weight: 400;
+			width: 550px;
+			margin-left: 450px;
+			margin-bottom: 50px;
+		} 
+		
+		#image0 {
+			object-fit: cover;
+			position: relative;
+			width:300px;
+			height:300px;
+			margin-left: 120px;
+			margin-bottom: 25px;
+			overflow: hidden;
+		}
+		
+	</style>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div id="h1"></div>
+<div id="h3"></div>
+<div id="menu">	
+</div>
+<div style="float:left" id="image0"></div>
+<div id="modal0" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="map0">
+  <div id="caption0"></div>
+</div>
+
+
+<script>
+	// IMPORTANT STUFF IN THIS CONTAINER
+	
+	var FlickrAPIKey = '1b453fbb66dadbe45def4d821534aa05';
+	var word = 'Paris';
+
+	// generate image based on hard-coded query labeled above as var'word'
+	function generate()
+	{
+		// IMAGE FOR DISPLAY
+		console.log("Fetching images for subject " + word); 
+		$.ajax({
+		  url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&text=' + word + '&has_geo=1&format=json&nojsoncallback=1&api_key=' + FlickrAPIKey,
+		  success: function(data) {	
+			console.log(data);
+			// assemble Flickr image URL (as per https://www.flickr.com/services/api/misc.urls.html)
+			  
+			var photo0 = data.photos.photo[0];
+			  
+			// create image url
+			var imgUrl0 = "https://farm" + photo0.farm + ".staticflickr.com/" + photo0.server + "/" + photo0.id + "_" + photo0.secret + "_d.jpg";
+			id0 = "" + photo0.id + "";
+			  
+			// displays image on webpage
+			$('#image0').html(photo0);
+			$('#image0').append('<img src="' + imgUrl0 + '"/>');
+			  
+			// prints image url to the console
+			console.log(imgUrl0);
+
+		  },
+		  async: true,
+		  dataType:"json"
+		});
+	}
+	
+	window.onload=generate()
+
+</script>
+</body>
+</html>
