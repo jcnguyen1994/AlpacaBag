@@ -17,17 +17,13 @@ p {
 }
 
 @font-face {
-    font-family: 'GothamBook';
-    src: url('Gotham-Book.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
+    font-family: GothamBook;
+    src: url('Gotham-Book.otf');
 }
 
 @font-face {
-    font-family: 'GothamBold';
-    src: url('Gotham-Bold.otf') format('otf');
-    font-weight: normal;
-    font-style: normal;
+    font-family: GothamBold;
+    src: url('Gotham-Bold.otf');
 }
 
 body {
@@ -59,6 +55,7 @@ input[type=text] {
     box-sizing: border-box;
 	text-align: center;
     border: none;
+    font-family: GothamBook;
 }
 
 .button1 {
@@ -71,7 +68,7 @@ input[type=text] {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 20px;
-  font-family: Arial;
+  font-family: GothamBook;
   color: #ffffff;
   font-size: 12px;
   padding: 8px 10px 8px 10px;
