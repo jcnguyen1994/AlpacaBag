@@ -123,6 +123,11 @@ input[type=text] {
     clear: both;
 }
 
+/*#container {
+    border: solid 2px #ffffff;
+    margin-right: 10px;
+}*/
+
 @media (max-width: 600px) {
     .column.side, .column.middle {
         width: 100%;
