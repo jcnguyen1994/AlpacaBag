@@ -35,6 +35,43 @@ body {
     font-size: 12px;
 }
 
+input[type=text] {
+	width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+	border-radius: 20px;
+    box-sizing: border-box;
+	text-align: center;
+    border: none;
+}
+
+.button1 {
+  background: #f69c9c;
+  background-image: -webkit-linear-gradient(top, #f69c9c, #e08f8f);
+  background-image: -moz-linear-gradient(top, #f69c9c, #e08f8f);
+  background-image: -ms-linear-gradient(top, #f69c9c, #e08f8f);
+  background-image: -o-linear-gradient(top, #f69c9c, #e08f8f);
+  background-image: linear-gradient(to bottom, #f69c9c, #e08f8f);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 10px 8px 10px;
+  text-decoration: none;
+}
+
+.button1:hover {
+  background: #f69c9c;
+  background-image: -webkit-linear-gradient(top, #f69c9c, #f69c9c);
+  background-image: -moz-linear-gradient(top, #f69c9c, #f69c9c);
+  background-image: -ms-linear-gradient(top, #f69c9c, #f69c9c);
+  background-image: -o-linear-gradient(top, #f69c9c, #f69c9c);
+  background-image: linear-gradient(to bottom, #f69c9c, #f69c9c);
+  text-decoration: none;
+}
+
 /* Create three unequal columns that floats next to each other */
 .column {
     float: left;
