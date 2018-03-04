@@ -1,5 +1,5 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 p {
@@ -36,12 +36,12 @@ body {
 }
 
 input[type=text] {
-	width: 15%;
+    width: 15%;
     padding: 12px 20px;
     margin: 8px 0;
-	border-radius: 20px;
+    border-radius: 20px;
     box-sizing: border-box;
-	text-align: center;
+    text-align: center;
     border: none;
 }
 
