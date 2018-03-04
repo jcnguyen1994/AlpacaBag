@@ -85,7 +85,7 @@ input[type=text] {
     font-weight: 100;
     font-size: 15px;
     align-self: center;
-    background: #C6C7AA;
+    background: #83AF9A;
     
     border: solid 2px #ffffff;
     border-radius: 50px;
@@ -95,9 +95,9 @@ input[type=text] {
 }
 
 .button2:hover {
-    background: #83AF9A;
+    background: #C6C7AA;
     color: #262733;
-    border: solid 2px aliceblue;
+    border: solid 2px #ffffff;
 }
 
 /* Create three unequal columns that floats next to each other */
@@ -123,6 +123,10 @@ input[type=text] {
     clear: both;
 }
 
+#container {
+    border: solid 2px #ffffff;
+    margin-right: 10px;
+}
 
 @media (max-width: 600px) {
     .column.side, .column.middle {
