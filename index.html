@@ -3,7 +3,7 @@
  <head>
  </head>
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
- <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" type="text/css" href="https://rawgithub.com/jcnguyen1994/AlpacaBag/master/style.css">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <body>
   <div class="header">
@@ -24,6 +24,7 @@
   // IMPORTANT STUFF IN THIS CONTAINER
   
   var FlickrAPIKey = '1b453fbb66dadbe45def4d821534aa05';
+  var curPhoto;
 
   // generate image based on hard-coded query labeled above as var'word'
   function generate(word)
@@ -41,7 +42,7 @@
       // create image url
       var imgUrl0 = "https://farm" + photo0.farm + ".staticflickr.com/" + photo0.server + "/" + photo0.id + "_" + photo0.secret + "_d.jpg";
       id0 = "" + photo0.id + "";
-        
+
       // displays image on webpage
       $('#image0').html(photo0);
       $('#image0').append('<img src="' + imgUrl0 + '"/>');
@@ -59,7 +60,7 @@
 
 </script>
 
-<div id="image0"></div>
+<div style="display:none" id="image0"></div>
 
 
 
@@ -84,7 +85,7 @@
    </script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-	<script src="datamaps.world.min.js"></script>
+ <script src="https://rawgithub.com/jcnguyen1994/AlpacaBag/master/datamaps.world.min.js"></script>
 	<div id="container" style="position: relative; width: 100%; height: 700px; align-content: center;"></div>
 	<script>
 		var x = "Name";
