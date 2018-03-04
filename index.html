@@ -22,55 +22,6 @@
   </br>
   <button class="button button2" id="download" onclick="nameFunction()">Download Your Map!</button>
   </div>
-  
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-
-<div style="display: none;" id="image0"></div>
-<style>
-  img {
-    width: 200px;
-    height: auto;
-  }
-</style>
-<script>
-  // IMPORTANT STUFF IN THIS CONTAINER
-  
-  var FlickrAPIKey = '1b453fbb66dadbe45def4d821534aa05';
-
-  // generate image based on hard-coded query labeled above as var'word'
-  function generate(word)
-  {
-    // IMAGE FOR DISPLAY
-    console.log("Fetching images for subject " + word); 
-    $.ajax({
-      url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&text=' + word + '&has_geo=1&format=json&nojsoncallback=1&api_key=' + FlickrAPIKey,
-      success: function(data) { 
-      console.log(data);
-      // assemble Flickr image URL (as per https://www.flickr.com/services/api/misc.urls.html)
-        
-      var photo0 = data.photos.photo[0];
-        
-      // create image url
-      var imgUrl0 = "https://farm" + photo0.farm + ".staticflickr.com/" + photo0.server + "/" + photo0.id + "_" + photo0.secret + "_d.jpg";
-      id0 = "" + photo0.id + "";
-        
-      // displays image on webpage
-      $('#image0').html(photo0);
-      $('#image0').append('<img src="' + imgUrl0 + '"/>');
-        
-      // prints image url to the console
-      console.log(imgUrl0);
-
-      },
-      async: true,
-      dataType:"json"
-    });
-  }
-
-</script>
-
-
   <div class="row">
     <div class="column side">
     </div>
@@ -148,7 +99,8 @@
             d3.select("#download")
               .on('click', function(){
                   // Get the d3js SVG element and save using saveSvgAsPng.js
-                  saveSvgAsPng(document.getElementsByTagName("svg")[0], "AlpacaBagMap.png", {scale: 2, backgroundColor: "#6187A4"});
+                  var d = Date;
+                  saveSvgAsPng(document.getElementsByTagName("svg")[0], "AlpacaBagMap(" + Date.now().toString() + ".png", {scale: 2, backgroundColor: "#6187A4"});
               });
     		}
     	});	
