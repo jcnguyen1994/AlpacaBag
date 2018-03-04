@@ -4,12 +4,28 @@
 
 p {
     display: inline-block;
+    font-family: 'GothamBold', normal, normal;
+    font-size: 20px;
 }
 
 @font-face {
     font-family: 'pacificoregular';
     src: url('pacifico.regular-webfont.woff2') format('woff2'),
          url('pacifico.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('Gotham-Book.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('Gotham-Bold.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
