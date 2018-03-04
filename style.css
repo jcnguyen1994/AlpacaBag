@@ -59,30 +59,45 @@ input[type=text] {
 }
 
 .button1 {
-  background: #f69c9c;
-  background-image: -webkit-linear-gradient(top, #f69c9c, #e08f8f);
-  background-image: -moz-linear-gradient(top, #f69c9c, #e08f8f);
-  background-image: -ms-linear-gradient(top, #f69c9c, #e08f8f);
-  background-image: -o-linear-gradient(top, #f69c9c, #e08f8f);
-  background-image: linear-gradient(to bottom, #f69c9c, #e08f8f);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 20px;
-  font-family: GothamBook;
-  color: #ffffff;
-  font-size: 12px;
-  padding: 8px 10px 8px 10px;
-  text-decoration: none;
+    color: #ffffff;
+    font-family: GothamBook;
+    font-weight: 100;
+    font-size: 15px;
+    align-self: center;
+    background: #F69C9C;
+    
+    border: solid 2px #ffffff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    
+    transition-duration: 300ms;
 }
 
 .button1:hover {
-  background: #f69c9c;
-  background-image: -webkit-linear-gradient(top, #f69c9c, #f69c9c);
-  background-image: -moz-linear-gradient(top, #f69c9c, #f69c9c);
-  background-image: -ms-linear-gradient(top, #f69c9c, #f69c9c);
-  background-image: -o-linear-gradient(top, #f69c9c, #f69c9c);
-  background-image: linear-gradient(to bottom, #f69c9c, #f69c9c);
-  text-decoration: none;
+    background: #FACDAE;
+    color: #262733;
+    border: solid 2px #ffffff;
+}
+
+.button2 {
+    color: #ffffff;
+    font-family: GothamBook;
+    font-weight: 100;
+    font-size: 15px;
+    align-self: center;
+    background: #C6C7AA;
+    
+    border: solid 2px #ffffff;
+    border-radius: 50px;
+    padding: 10px 15px;
+    
+    transition-duration: 300ms;
+}
+
+.button2:hover {
+    background: #83AF9A;
+    color: #262733;
+    border: solid 2px aliceblue;
 }
 
 /* Create three unequal columns that floats next to each other */
